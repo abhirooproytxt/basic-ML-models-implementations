@@ -1,0 +1,4 @@
+Implementations of fundamental machine learning models.
+
+Contents:
+1. Gaussian Bayes Classification (QDA)
