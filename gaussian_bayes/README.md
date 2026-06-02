@@ -14,6 +14,7 @@ $$
 
 
 2. Class-specific means and covariance matrices. $$\mu_k, \Sigma_k$$ 
+
 Enough data belonging to each class to calculate means and covariances for each class, not shared ones. This makes it a Quadratic Discriminant Analysis (QDA). The decision boundaries are quadratic.
 
 
