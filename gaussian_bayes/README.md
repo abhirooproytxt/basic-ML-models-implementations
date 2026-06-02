@@ -17,7 +17,12 @@ $$
 
 
 
-3. Class priors exist. $$ P(y=k) $$ 
+3. Class priors exist. 
+
+$$ 
+P(y=k) 
+$$ 
+
 Class prior probability exist for a class k.
 Total number of classes in training data is known.
 
