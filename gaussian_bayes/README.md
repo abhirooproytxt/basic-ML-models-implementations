@@ -13,9 +13,7 @@ $$P(x|y=k)=\frac{1}{(2\pi)^{d/2}|\Sigma_k|^{1/2}}
 $$
 
 
-2. Class-specific means and covariance matrices. $$\mu_k, \Sigma_k$$ 
-
-Enough data belonging to each class to calculate means and covariances for each class, not shared ones. This makes it a Quadratic Discriminant Analysis (QDA). The decision boundaries are quadratic.
+2. Class-specific means and covariance matrices. $$\mu_k, \Sigma_k$$  Enough data belonging to each class to calculate means and covariances for each class, not shared ones. This makes it a Quadratic Discriminant Analysis (QDA). The decision boundaries are quadratic.
 
 
 
