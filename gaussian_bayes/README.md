@@ -5,6 +5,7 @@ Gaussian Bayes Classification (QDA) (No Naive Assumptions)
 Assumptions:
 
 1. Features follow multivariate Gaussians for each class.
+
 $$x \mid y = k \sim \mathcal{N}(\mu_k, \Sigma_k)$$
 
 $$P(x|y=k)=\frac{1}{(2\pi)^{d/2}|\Sigma_k|^{1/2}}
@@ -27,11 +28,13 @@ Total number of classes in training data is known.
 Classification:
 
 Posterior probability, 
+
 $$
 P(y=k \mid x)
 \propto
 P(x \mid y=k)P(y=k)
 $$
+
 $$
 P(y=k \mid x)=
 \frac{
@@ -40,8 +43,10 @@ P(x \mid y=k)P(y=k)
 \sum_{j=1}^{K} P(x \mid y=j)P(y=j)
 }
 $$
+
 We ignore the marginal probability, because it is a constant. And we use log scores to prevent comparing too small values.
 So prediction,
+
 $$\hat{c} = \arg\max_{c} \, \left[ \log P(\mathbf{x} \mid c) + \log P(c) \right]$$
 
 
