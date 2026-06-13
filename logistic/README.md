@@ -4,7 +4,7 @@ This project implements **Binary Logistic Regression** from scratch using **Maxi
 
 ## Model
 
-For labels (y_i \in {-1,+1}), the probability of correct classification is:
+For labels $ y_i \in {-1,+1} $, the probability of correct classification is:
 
 $$
 P(y_i \mid x_i,w)=\sigma(y_i x_i^T w)
@@ -23,14 +23,7 @@ $$
 A Gaussian prior is placed on the weights, resulting in the following objective function:
 
 $$
-J(w)
-=
-
-\sum_{i=1}^{n}
-\log\left(\sigma(y_i x_i^T w)\right)
--
-
-\frac{\lambda}{2}w^T w
+J(w) = \sum_{i=1}^{n}\log\left(\sigma(y_i x_i^T w)\right) - \frac{\lambda}{2}w^T w
 $$
 
 The first term maximizes the likelihood of the data, while the second term performs L2 regularization.
@@ -42,33 +35,13 @@ The first term maximizes the likelihood of the data, while the second term perfo
 The gradient of the objective is:
 
 $$
-\nabla J(w)
-=
-
-\sum_{i=1}^{n}
-\left(1-\sigma(y_i x_i^T w)\right)
-y_i x_i
--
-
-\lambda w
+\nabla J(w) = \sum_{i=1}^{n} \left(1-\sigma(y_i x_i^T w)\right)y_i x_i - \lambda w
 $$
 
 Vectorized form:
 
 $$
-\nabla J(w)
-=
-
-X^T
-\left(
-y \odot
-\left(
-1-\sigma(y\odot(Xw))
-\right)
-\right)
--
-
-\lambda w
+\nabla J(w) = X^T\left(y \odot\left(1-\sigma(y\odot(Xw))\right)\right) - \lambda w
 $$
 
 ---
